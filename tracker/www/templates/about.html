@@ -1,0 +1,28 @@
+<ion-view ng-controller="aboutCtrl">
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider">
+        How To
+      </div>
+      <div class="item item-text-wrap">
+        On the directory page, press the + button to add and rate a food item. You can then use the magnifying glass to search your whole directory. Press the menu button at the top to change to the Journal page. You can then select a date to write a journal
+        entry and choose how many bowel movements you had that day.
+      </div>
+      <div class="item item-text-wrap">
+        Press and hold on a food item to delete it or to go to a details page which allows you to add ingredients to each food item.
+      </div>
+      <div class="item item-text-wrap">
+        If you upgrade to premium using the in-app purchase, you will have the ability to make an account and backup your data.
+        So when you change devices, you can redownload the app and get your data back.
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap" style="font-size: 10px">
+        Version: 1.1.1
+      </div>
+    </div>
+    <button ng-hide="isIOS" class="button button-balanced" ng-click="restorePurchase()" style="opacity: 0.8; margin: 10px;">
+      Restore Purchase
+    </button>
+  </ion-content>
+</ion-view>

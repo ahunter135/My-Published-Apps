@@ -1,0 +1,11 @@
+<ion-view ng-controller="HomeCtrl">
+  <ion-floating-button click="myButtonEvent()" has-footer="true" button-color="#444444" icon="ion-plus" icon-color="#ffffff">
+  </ion-floating-button>
+  <ion-content>
+    <a ng-repeat="equipment in equipment track by $index" on-hold="equipDetails(equipment)" class="item item-thumbnail-left" ng-click="goToEquipDetail(equipment)">
+      <img src="data:image/png;base64, {{equipment.image}}">
+      <h2>Item Name: {{equipment.itemName}}</h2>
+      <p>Serial Number: {{equipment.serialNumber}}</p>
+    </a>
+  </ion-content>
+</ion-view>

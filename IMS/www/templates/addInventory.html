@@ -1,0 +1,30 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title" style="text-align: center;">Add Item</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="manageEquipForm">
+      <label class="item item-input item-stacked-label">
+              <span class="input-label">Item Name</span>
+              <input type="text" ng-model="item.itemName" placeholder="Widget">
+            </label>
+      <label class="item item-input item-stacked-label">
+              <span class="input-label">Model Name</span>
+              <input type="text" ng-model="item.modelName" placeholder="HQ-123">
+            </label>
+      <label class="item item-input item-stacked-label">
+              <span class="input-label">Serial Number</span>
+              <input type="text" ng-model="item.serialNumber" placeholder="M156732-90">
+            </label>
+      <label class="item item-input item-stacked-label">
+              <span class="input-label">Vendor</span>
+              <input type="text" ng-model="item.vendor" placeholder="Comcast">
+            </label>
+
+      <div class="button-bar" style="padding: 3px">
+        <a class="button button-dark" ng-click="addPhoto()">Add Photo</a>
+        <a class="button button-dark" ng-click="submit()">Submit</a>
+        <a class="button button-dark" ng-click="closeAddModal()">Cancel</a>
+      </div>
+  </ion-content>
+</ion-modal-view>

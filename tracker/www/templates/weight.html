@@ -1,0 +1,21 @@
+<ion-view ng-controller="WeightCtrl">
+  <ion-content>
+    <onezone-datepicker datepicker-object="onezoneDatepicker">
+    </onezone-datepicker>
+    <br>
+    <table>
+      <tr>
+        <ul class="list">
+          <li class="item">
+            <p>Your Weight: {{selectedWeight}}</p>
+          </li>
+        </ul>
+    <ionic-numberpicker input-obj="numberPickerObject">
+      <button class="button button-block button-calm">
+        <i class="ion-archive"> Enter Weight</i>
+      </button>
+    </ionic-numberpicker>
+  </tr>
+  </table>
+  </ion-content>
+</ion-view>

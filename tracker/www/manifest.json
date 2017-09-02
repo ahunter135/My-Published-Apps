@@ -1,0 +1,12 @@
+{
+  "name": "My Ionic App",
+  "short_name": "My Ionic App",
+  "start_url": "index.html",
+  "display": "standalone",
+  "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8deTVVtKwe+FfagDGLfVNCRXyXvA1oeRc5uuSCpTCPa210GxD0SggUweaaw72sAXO9V6IlcVwxrO/g3eAehacoYhzJcVOOy1vtBtHVykeorcpeRbCEAvaqRSV7JdZNk6ioIBflFrUv+yypldN8x0xMQDjx3kDYDxEKmH3S8UBL0o1awsv5kSQrnX7rtMu3zKgzfMp5Y6zvA+xe74orKclw987m9mepzxPL/mHn4m4exr5bIdPCL0/hZwYVPakJpiAoWOnhb6lFtOflBggqk3iTXG/kmgVoHZv3kZZ5Z3T31yuZ0gy3D9r2GuF6lYtht7MLW4Ki3Q0sbz0Qbt9ZFMQIDAQAB",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

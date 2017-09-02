@@ -1,0 +1,42 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDetailsModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider" ng-click="editName(item)">
+        Food Item: {{item.name}}
+      </div>
+      <div class="item item-text-wrap" style="font-weight: bold">
+        Ingredients:
+      </div>
+      <div class="item item-text-wrap" ng-repeat="item in ingredients" ng-click="removeIngredient(item)">
+        {{$index + 1}}. {{item}}
+      </div>
+    </div>
+    <div style="margin: 8px">
+      <p>Comment Area:</p>
+    </div>
+    <label class="item item-input" style="margin: 8px">
+    <textarea placeholder="Comments" ng-model="data.comments"></textarea>
+  </label>
+    <div class="row">
+      <div class="col col-50">
+        <button class="button button-block button-balanced" ng-click="addIngredient()" style="opacity: 0.8;">
+    Add Ingredient
+  </button>
+      </div>
+      <div class="col col-50">
+        <button class="button button-block button-balanced" ng-click="submitDetails(data.comments)" style="opacity: 0.8;">
+    Submit
+  </button>
+      </div>
+    </div>
+    <div style="margin: 8px; font-size: 8px;">
+      *Tap the food name to edit the name.
+      Tap the ingredient to remove it.
+    </div>
+  </ion-content>
+</ion-modal-view>

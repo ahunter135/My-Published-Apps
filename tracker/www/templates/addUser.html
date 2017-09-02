@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title" style="text-align: center;">Add a User</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list" style="padding: 10px;">
+      <label class="item item-input">
+        <input type="text" placeholder="What is their full name?" ng-model="userName">
+    </label>
+      <label class="item item-input">
+          <input type="text" placeholder="Who is this person?" ng-model="role">
+      </label>
+      <button class="button button-full button-royal" ng-click="takePhoto()">
+        Add Photo
+      </button>
+      <button class="button button-full button-royal" ng-click="submit(userName, role)">
+        Submit
+      </button>
+      <button class="button button-full button-royal" ng-click="closeAddModal()">
+        Cancel
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

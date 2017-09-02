@@ -1,0 +1,23 @@
+<ion-view ng-controller="homeCtrl">
+  <ion-nav-bar class="bar-balanced" align-title="center" on-hold="showLogin()">
+    <ion-nav-title>{{title}}</ion-nav-title>
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content id="background">
+    <div class="row">
+    <label class="item item-input">
+      <input type="number" placeholder="" ng-model="referral.data" ng-show="referralYN" style="width: 200px; padding: 25px">
+    </label>
+  </div>
+    <div style="height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;">
+      <button class="button button-balanced" style="width: 50%; font-size: 50px; padding: 35px;" ng-click="startSurvey(referral)">
+        Start
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

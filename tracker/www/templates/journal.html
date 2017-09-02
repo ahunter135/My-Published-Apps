@@ -1,0 +1,25 @@
+<ion-modal-view ng-controller="journalCtrl">
+  <ion-content>
+    <a ng-click="showDatePicker(startDate)" class="item item-icon-right" ng-model="startDate">
+      <i class="icon ion-chevron-right"></i>
+      <p>{{startDate.text}}</p>
+    </a>
+    <div class="list list-inset">
+      <label class="item item-input">
+          <textarea placeholder="Journal Entry" ng-model="formData.journalEntry" style="height: 250px;"></textarea>
+        </label>
+      <button class="button button-full button-calm" ng-click="submitEntry()">Submit</button>
+      <button class="button button-block button-calm" ng-click="addModal.hide()">
+        Cancel
+      </button>
+      <div class="item range range-positive">
+        {{slider.value}}
+        <i class="icon ion-ios-trash-outline"></i>
+        <input type="range" name="volume" ng-click="updateSlider()" ng-model="slider.value" min="{{slider.min}}" max="{{slider.max}}" value="{{slider.value}}">
+        <i class="icon ion-ios-trash"></i>
+      </div>
+      <p style="font-size: 8px; color: gray;">*Bowel Movements</p>
+    </div>
+    <ion-checkbox ng-checked="timers.checked" ng-click="setTimer()">Receive Notifications?</ion-checkbox>
+  </ion-content>
+</ion-modal-view>

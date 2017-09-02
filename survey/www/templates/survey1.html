@@ -1,0 +1,222 @@
+<ion-view>
+  <ion-nav-bar class="bar-balanced" align-title="center" on-hold="showLogin()">
+    <ion-nav-title>{{title}}</ion-nav-title>
+    <ion-nav-back-button>
+      <button class="button-clear">Close</button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+    <ion-slide-box show-pager="false">
+      <ion-slide>
+        <div class="box blue">
+          <div class="card">
+
+            <div class="item item-divider item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              {{questionOne.question}}
+            </div>
+            <ion-list ng-model="questionOne">
+
+              <ion-checkbox ng-model="questionOneV.Reliable" style="font-size: 20px;" ng-click="clearNoneOfTheAbove()">{{questionOne.value0}}</ion-checkbox>
+              <ion-checkbox ng-model="questionOneV.Knowledgeable" style="font-size: 20px;" ng-click="clearNoneOfTheAbove()">{{questionOne.value1}}</ion-checkbox>
+              <ion-checkbox ng-model="questionOneV.Helpful" style="font-size: 20px;" ng-click="clearNoneOfTheAbove()">{{questionOne.value2}}</ion-checkbox>
+              <ion-checkbox ng-model="questionOneV.Courteous" style="font-size: 20px;" ng-click="clearNoneOfTheAbove()">{{questionOne.value3}}</ion-checkbox>
+              <ion-checkbox ng-model="questionOneV.NoneOfTheAbove" style="font-size: 20px;" ng-click="noneOfTheAbove()" ng-checked="noneOfTheAboveChecked">{{questionOne.value4}}</ion-checkbox>
+
+            </ion-list>
+            <div class="row">
+              <div class="col col-50">
+                <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                  Back
+                </button>
+              </div>
+              <div class="col col-50">
+                <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="nextSlide()">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box blue">
+          <div class="card">
+            <div class="item item-divider item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              {{questionTwo.question}}
+            </div>
+            <ion-list>
+              <ion-radio ng-model="questionTwoV.checked"  style="font-size: 20px;" ng-value="'{{value}}'" name="questionTwo" ng-repeat="value in questionTwo.values">{{value}}</ion-radio>
+            </ion-list>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                Back
+              </button>
+            </div>
+            <div class="col col-50">
+              <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="nextSlide()">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box red">
+          <div class="card">
+            <div class="item item-divider item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              {{questionThree.question}}
+            </div>
+            <ion-list>
+              <ion-radio ng-model="questionThreeV.checked" style="font-size: 20px;" ng-value="'{{value}}'" name="questionThree" ng-repeat="value in questionThree.values">{{value}}</ion-radio>
+            </ion-list>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                Back
+              </button>
+            </div>
+            <div class="col col-50">
+              <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="nextSlide()">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box red">
+          <div class="card">
+            <div class="item item-divider item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              {{questionFour.question}}
+            </div>
+            <ion-list>
+              <center>
+                <div class="col col-30">
+                  <ion-radio class="item-text-wrap" ng-value="'Not Likely'" style="font-size: 20px; text-align: center;" name="q4" ng-model="questionFourV.checked" name="questionFour1" >Not Likely</ion-radio>
+                </div>
+                <div class="col col-30">
+                  <ion-radio class="item-text-wrap" ng-value="'Very Likely'" style="font-size: 20px; text-align: center;" name="q4" ng-model="questionFourV.checked" name="questionFour5" >Very Likely</ion-radio>
+                </div>
+              </center>
+            </ion-list>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                Back
+              </button>
+            </div>
+            <div class="col col-50">
+              <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="nextSlide()">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box green">
+          <div class="card">
+            <div class="item item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              Do you currently have life insurance? Select One.
+              <div class="row">
+                <div class="col col-50">
+                  <ion-radio ng-model="form.choice1" ng-value="'Yes'" name="choice1" style="text-align: center; font-size: 20px;">Yes</ion-radio>
+                </div>
+                <div class="col col-50">
+                  <ion-radio ng-model="form.choice1" ng-value="'No'" name="choice1" style="text-align: center; font-size: 20px;">No</ion-radio>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="item item-text-wrap" style="font-size: 20px; text-align: center; font-weight: bold;">
+              Do you have a brokerage account (stocks, bonds, etc) and/or annuities held outside of this bank? Select One.
+              <div class="row">
+                <div class="col col-50">
+                  <ion-radio ng-model="form.choice2" ng-value="'Yes'" style="text-align: center; font-size: 20px;">Yes</ion-radio>
+                </div>
+                <div class="col col-50">
+                  <ion-radio ng-model="form.choice2" ng-value="'No'" style="text-align: center; font-size: 20px;">No</ion-radio>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                Back
+              </button>
+            </div>
+            <div class="col col-50">
+              <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="nextSlide()">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="box yellow">
+          <div class="card">
+            <div class="item item-divider" style="font-size: 20px; text-align: center; font-weight: bold;">
+              For your FREE lost or trapped money search please complete the questions below.
+            </div>
+            <div class="item item-text-wrap">
+              <div class="list">
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">Full Name</span>
+                  <input type="text" placeholder="" ng-model="form.fullName" ng-click="removePlaceholder('name')">
+                </label>
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">Street Address</span>
+                  <input type="text" placeholder="" ng-model="form.address" ng-click="removePlaceholder('address')">
+                </label>
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">City</span>
+                  <input type="text" placeholder="" ng-model="form.city" ng-click="removePlaceholder('city')">
+                </label>
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">State</span>
+                  <input type="text" placeholder="" ng-model="form.state" ng-click="removePlaceholder('state')">
+                </label>
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">Zip Code</span>
+                  <input type="number" placeholder="" ng-model="form.zip" ng-click="removePlaceholder('zip')">
+                </label>
+                <br>
+                <center><p style="font-size: 20px;">Required Info For Property Search</p></center>
+                <br>
+                <label class="item item-input">
+                  <span class="input-label" style="font-size: 20px;">Phone Number</span>
+                  <input type="number" placeholder="" ng-model="form.phone" ng-click="removePlaceholder('phone')">
+                </label>
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <button class="button button-block button-balanced" ng-click="backSlide()" style="font-size: 25px;">
+                Back
+              </button>
+            </div>
+            <div class="col col-50">
+              <button class="button button-block button-balanced" style="font-size: 25px;" ng-click="submit()">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

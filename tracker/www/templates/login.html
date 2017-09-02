@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-content>
+    <div style="padding: 10px">
+      <div style="padding-top: 60px">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="password">
+        </label>
+      </div>
+      <button class="button button-block button-balanced" ng-click="login(username, password)" style="opacity: 0.8">
+        Login
+      </button>
+      <button class="button button-block button-balanced" ng-click="createAccount()" style="opacity: 0.8">
+        Create Account
+      </button>
+      <!--<a ng-click="forgotPassword()">Forgot Password?</a>-->
+    </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

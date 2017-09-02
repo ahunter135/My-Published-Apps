@@ -1,0 +1,13 @@
+<ion-view ng-controller="trackerCtrl">
+  <ion-floating-button click="myButtonEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" icon-color="#ffffff">
+  </ion-floating-button>
+    <ion-content>
+      <ion-list>
+        <a class="item item-icon-left" ng-click="edit(item)" on-hold="showSheet(item)" ng-repeat="item in text track by $index">
+          <i class=""></i>
+          {{item.name}}
+          <span class="badge {{item.type}}">{{item.grade}}</span>
+        </a>
+      </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view ng-controller="accountCtrl">
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider">
+        Account
+      </div>
+      <div class="item item-text-wrap">
+        {{rootAccount.fullName}}
+      </div>
+      <div class="item item-text-wrap">
+        Email: {{rootAccount.email}}
+      </div>
+      <div class="item item-text-wrap">
+        Username: {{rootAccount.username}}
+      </div>
+    </div>
+    <div style="padding: 6px">
+      <button class="button button-block button-balanced" ng-click="backup(rootAccount.fullName, rootAccount.username, rootAccount.email, rootAccount.password, true)" style="opacity: 0.8; padding: 2px;">
+        Backup
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

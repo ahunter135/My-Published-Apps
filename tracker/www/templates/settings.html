@@ -1,0 +1,13 @@
+<ion-view ng-controller="settingsCtrl">
+  <ion-floating-button click="myEvent()" has-footer="true" button-color="#2AC9AA" icon="ion-plus" icon-color="#ffffff">
+  </ion-floating-button>
+  <ion-content>
+    <div class="list" ng-repeat="users in userArray.name track by $index">
+      <a class="item item-thumbnail-left" on-hold="editUser(users)" ng-click="changeUser(users)">
+        <img src="profile.png">
+        <h2>{{users.name}}</h2>
+        <p>{{users.role}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
